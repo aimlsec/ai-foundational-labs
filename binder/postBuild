@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+mkdir -p datasets
+
+# Download SMSSpamCollection (used by Lab1, Lab2)
+wget -q "https://archive.ics.uci.edu/static/public/228/sms+spam+collection.zip" -O /tmp/sms.zip
+unzip -p /tmp/sms.zip SMSSpamCollection > datasets/SMSSpamCollection
+rm /tmp/sms.zip
+
+# Download nursery.data (used by Lab3, Lab4)
+wget -q "https://archive.ics.uci.edu/ml/machine-learning-databases/nursery/nursery.data" -O datasets/nursery.data
